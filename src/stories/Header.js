@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { Navbar } from "react-bootstrap";
 import { Button } from "./button/Button";
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <header>
-    <nav class="navbar navbar-dark bg-dark">
+    <Navbar bg="dark" variant="dark">
       <a class="navbar-brand" href="#">
         Navbar w/ text
       </a>
@@ -40,7 +40,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
         </ul>
         <span class="navbar-text">Navbar text with an inline element</span>
       </div>
-    </nav>
+    </Navbar>
     <div className="wrapper">
       <div>
         <svg

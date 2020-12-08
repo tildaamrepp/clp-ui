@@ -1,7 +1,7 @@
 {
   "name": "clp-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
@@ -62,5 +62,17 @@
     "sass-loader": "^10.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tildaamrepp/clp-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tildaamrepp/clp-ui/issues"
+  },
+  "homepage": "https://github.com/tildaamrepp/clp-ui#readme"
 }

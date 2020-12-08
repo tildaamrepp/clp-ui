@@ -1,0 +1,19 @@
+{
+  "name": "clp-ui",
+  "version": "1.0.0",
+  "description": "bootstrap 4 customized for Cloudplanning",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tildaamrepp/clp-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tildaamrepp/clp-ui/issues"
+  },
+  "homepage": "https://github.com/tildaamrepp/clp-ui#readme"
+}

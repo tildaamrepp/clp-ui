@@ -3,8 +3,8 @@
 $border-radius: 0.6rem;
 
 @import "../style/button.scss";
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
 
 $blue: #0098b8;
 $red: #e45c41;
@@ -33,4 +33,4 @@ $alert-color-level: 1;
 @import "../style/field.scss";
 @import "../style/card.scss";
 @import "../style/size.scss";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
