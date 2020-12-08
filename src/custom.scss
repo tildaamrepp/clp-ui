@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+/* -------begin customization-------- */
+$theme-colors: (
+  primary: #0098b8,
+);
+/* -------end customization-------- */
+/* finally, import Bootstrap to set the changes! */
+@import "bootstrap";
