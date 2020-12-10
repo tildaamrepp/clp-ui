@@ -3,6 +3,8 @@
 $border-radius: 0.6rem;
 
 @import "../style/button.scss";
+@import "../style/navbar.scss";
+@import "../style/typograph.scss";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 
@@ -31,6 +33,9 @@ $alert-bg-level: -10;
 $alert-color-level: 1;
 
 @import "../style/field.scss";
+
 @import "../style/card.scss";
 @import "../style/size.scss";
+@import "../style/wizard.scss";
+@import "../style/side-navbar.scss";
 @import "node_modules/bootstrap/scss/bootstrap";

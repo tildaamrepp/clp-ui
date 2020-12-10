@@ -1,0 +1,32 @@
+.wizard {
+  color: #009190;
+  .material-icons {
+    color: #009190;
+  }
+  .active {
+    background: #e5f0f0;
+  }
+  .done {
+    background: #e9f1dc;
+    .material-icons {
+      color: #89be3f;
+    }
+  }
+  .line::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    opacity: 1;
+    margin: 0 auto;
+    width: 100%;
+    height: 3px;
+    background: #eeeeee;
+    transition: 0.1s ease-in-out;
+    z-index: -1;
+    margin-top: -3.5rem;
+  }
+
+  .line-end::after {
+    width: 0%;
+  }
+}

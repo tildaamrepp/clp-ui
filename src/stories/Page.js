@@ -1,84 +1,92 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import "../custom.scss";
-import { Header } from "./Header";
-
-export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
-  <article>
-    <Header
-      user={user}
-      onLogin={onLogin}
-      onLogout={onLogout}
-      onCreateAccount={onCreateAccount}
-    />
-
-    <section>
-      <h2>Pages in Storybook</h2>
-      <p>
-        We recommend building UIs with a{" "}
-        <a
-          href="https://componentdriven.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <strong>component-driven</strong>
-        </a>{" "}
-        process starting with atomic components and ending with pages.
-      </p>
-      <p>
-        Render pages with mock data. This makes it easy to build and review page
-        states without needing to navigate to them in your app. Here are some
-        handy patterns for managing page data in Storybook:
-      </p>
-      <ul>
-        <li>
-          Use a higher-level connected component. Storybook helps you compose
-          such data from the "args" of child component stories
-        </li>
-        <li>
-          Assemble data in the page component from your services. You can mock
-          these services out using Storybook.
-        </li>
-      </ul>
-      <p>
-        Get a guided tutorial on component-driven development at{" "}
-        <a
-          href="https://www.learnstorybook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Storybook
+import { HomeOutlined, BusinessOutlined, Menu } from "@material-ui/icons";
+import imageFile from "./assets/Cloudplanning.svg";
+const image = {
+  src: imageFile,
+  alt: "my image",
+};
+export const Page = () => (
+  <div class="wrapper fullheight-side  ">
+    <div>
+      <div class="logo-header position-fixed d-none d-md-flex justify-content-center">
+        <a href="/" class="logo">
+          <img src={image.src} alt={image.alt} class="navbar-brand" />
         </a>
-        . Read more in the{" "}
-        <a
-          href="https://storybook.js.org/docs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          docs
-        </a>
-        .
-      </p>
-      <div className="tip-wrapper">
-        <span className="tip">Tip</span> Adjust the width of the canvas with the{" "}
-        <svg
-          width="10"
-          height="10"
-          viewBox="0 0 12 12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
-              id="a"
-              fill="#999"
-            />
-          </g>
-        </svg>
-        Viewports addon in the toolbar
+        <span class="p-2 d-flex align-items-center ml-4" role="button">
+          <Menu />
+        </span>
       </div>
-    </section>
-  </article>
+      <div class="sidebar " bg="light" variant="light" expand="md">
+        <ul class="navbar-nav flex-column w-100 pt-2">
+          <li class="nav-item">
+            <span class="nav-link px-3 d-flex align-items-center ">
+              <HomeOutlined />
+
+              <span class="ml-2">Översikt</span>
+            </span>
+          </li>
+          <div class="dropdown-divider" role="separator"></div>
+          <li class="nav-item">
+            <span class="nav-link px-3 d-flex align-items-center  active">
+              <BusinessOutlined />
+              <span class="ml-2">Kunder</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel full-height">
+      <nav class="top-navbar sticky-top shadow-sm navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="d-flex w-100">
+          <div class="p-0">
+            <span class="d-md-none navbar-brand">
+              <img
+                src="assets/Cloudplanning-logotyp-inverterad.png"
+                alt="logo"
+              />
+            </span>
+          </div>
+          <div class="ml-auto p-0">
+            <div class="d-none d-md-block">
+              <div class="ovveride-navbar-make-white-please-fix dropdown nav-item">
+                <span>tilda.amre@portalplus.se</span>
+              </div>
+            </div>
+            <div class="d-md-none">
+              <div class="ovveride-navbar-make-white-please-fix dropdown nav-item">
+                <span>
+                  <span
+                    class="material-icons MuiIcon-root MuiIcon-fontSizeInherit"
+                    aria-hidden="true"
+                  >
+                    account_circle
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-0 d-md-none">
+            <span
+              class="p-2 d-flex align-items-center ml-4 text-white"
+              role="button"
+            >
+              <span class="material-icons MuiIcon-root" aria-hidden="true">
+                menu
+              </span>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <nav class="navbar shadow-sm mb-4">
+          <h5 class="mb-0">Skapa kund</h5>
+          <div class="float-right"></div>
+        </nav>
+        <div class="container-fluid"></div>
+      </div>
+    </div>
+  </div>
 );
 Page.propTypes = {
   user: PropTypes.shape({}),

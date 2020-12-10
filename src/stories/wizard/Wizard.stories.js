@@ -13,9 +13,9 @@ import { Container } from "../Helper.stories";
 const BasicCards = () => {
   return (
     <Container title="Wizard">
-      <Row>
+      <Row className="wizard">
         <Col>
-          <Card.Body className="shadow-sm rounded-circle h-32 w-32 d-flex align-items-center justify-content-center alert-info">
+          <Card.Body className="shadow-sm rounded-circle h-32 w-32 d-flex align-items-center justify-content-center active">
             <BusinessOutlined fontSize="large" />
           </Card.Body>
         </Col>
