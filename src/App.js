@@ -1,6 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
 // import "./custom.scss";
+
+// export default function App() {
+//   return (
+//     <ThemeProvider theme={theme}>
+//       <div className="App">
+//         <Button color="primary">foo</Button>
+//         <Button color="secondary">bar</Button>
+//       </div>
+//     </ThemeProvider>
+//   );
+// }
 function App() {
   return (
     <div className="App">
@@ -9,6 +20,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
