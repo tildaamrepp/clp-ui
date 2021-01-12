@@ -76,21 +76,21 @@ const theme = createMuiTheme({
     },
     MuiTypography: {
       h1: {
-        fontSize: "3rem",
+        fontSize: "2.5rem",
         fontWeight: "400",
       },
       h2: {
-        fontSize: "2.25rem",
+        fontSize: "2rem",
         fontWeight: "400",
       },
       h3: {
-        fontSize: "2rem",
-      },
-      h4: {
         fontSize: "1.75rem",
       },
-      h5: {
+      h4: {
         fontSize: "1.50rem",
+      },
+      h5: {
+        fontSize: "1.25rem",
       },
     },
   },
