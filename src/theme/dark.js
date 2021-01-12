@@ -3,6 +3,7 @@ import cyan from "./colors/cyan";
 import green from "./colors/green";
 import blue from "./colors/blue";
 import imageFile from "../stories/assets/Cloudplanning-inverterad.png";
+import { yellow } from "@material-ui/core/colors";
 const image = {
   src: imageFile,
   alt: "clp-logo",
@@ -13,7 +14,7 @@ const theme = createMuiTheme({
     type: "dark",
     primary: cyan,
     secondary: green,
-    warning: green,
+    warning: yellow,
     background: {
       default: "#161C2D",
       paper: "#2E3547",

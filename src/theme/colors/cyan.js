@@ -1,6 +1,6 @@
 const cyan = {
-  50: "#ecf6f9",
-  100: "#acd8e4",
+  50: "#eef7fa",
+  100: "#eef7fa",
   200: "#8bc9da",
   300: "#4badc6",
   400: "#2ea2bf",
