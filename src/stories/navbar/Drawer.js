@@ -21,6 +21,7 @@ import {
   ListItemText,
   IconButton,
   Collapse,
+  Typography,
 } from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
@@ -30,10 +31,15 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+  },
   drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: "nowrap",
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0,
+      whiteSpace: "nowrap",
+    },
   },
   drawerOpen: {
     width: drawerWidth,
@@ -52,10 +58,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       width: theme.spacing(9) + 1,
     },
+    "& .MuiListItem-button": {
+      padding: theme.spacing(1, 3),
+    },
   },
 
   list: {
-    padding: theme.spacing(1, 3),
+    padding: theme.spacing(1, 2),
   },
   nested: {
     padding: theme.spacing(0.5, 3),
@@ -67,6 +76,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 0.5, 0, 2),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -106,7 +121,7 @@ const MuDrawer = (props) => {
           </IconButton>
         </div>
         <Divider />
-        <List>
+        <List disablePadding>
           <ListItem button onClick={handleClick} className={classes.list}>
             <ListItemIcon>
               <FontAwesomeIcon icon={faBus} size="lg" />
@@ -144,7 +159,10 @@ const MuDrawer = (props) => {
           ))}
         </List>
         <Divider />
-        <List>
+        <List disablePadding>
+          <ListItem>
+            <Typography variant="caption">Admin</Typography>
+          </ListItem>
           {["Användare", "Inställningar"].map((text, index) => (
             <ListItem button key={text} className={classes.list}>
               <ListItemIcon>

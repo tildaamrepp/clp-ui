@@ -3,7 +3,7 @@ import cyan from "./colors/cyan";
 import green from "./colors/green";
 import blue from "./colors/blue";
 import imageFile from "../stories/assets/Cloudplanning.svg";
-import { yellow } from "@material-ui/core/colors";
+import { grey, yellow } from "@material-ui/core/colors";
 import { svSE } from "@material-ui/core/locale";
 const image = {
   src: imageFile,
@@ -24,24 +24,34 @@ const theme = createMuiTheme(
         paper: "#ffffff",
       },
     },
+    typography: {
+      fontFamily: ["Poppins", "sans-serif"].join(","),
+    },
     appBar: {
       color: green,
     },
 
-    typography: {
-      fontFamily: ["Poppins", "sans-serif"].join(","),
-    },
     tabs: {
       backgroundColor: blue[700],
     },
+    root: {
+      "& .MuiDataGrid-columnSeparator": {
+        backgroundColor: "rgba(255, 7, 0, 0.55)",
+      },
+    },
     overrides: {
-      MuiButton: {
+      MuiDataGrid: {
         root: {
-          textTransform: "none",
-          fontWeight: "400",
-          borderRadius: "0.6rem",
+          fontWeight: "500",
+          "& .MuiDataGrid-columnSeparator": {
+            display: "none",
+          },
+          "& .MuiDataGrid-colCellTitle": {
+            color: grey[600],
+          },
         },
       },
+
       MuiTab: {
         root: {
           textTransform: "none",
@@ -55,7 +65,17 @@ const theme = createMuiTheme(
           backgroundColor: blue[700],
         },
       },
-      MuiDrawer: {},
+      MuiDrawer: {
+        root: {
+          color: cyan[500],
+          "& .MuiListItem-button": {
+            color: grey[700],
+          },
+          "& .MuiTypography-caption": {
+            color: grey[500],
+          },
+        },
+      },
       MuiListItem: {
         root: {
           "&$selected, &$selected:hover": {
